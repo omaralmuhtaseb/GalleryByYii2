@@ -30,9 +30,11 @@ class MediaController extends \yii\web\Controller
                 if ($name->saveAs($path)){
                     $model->filename=$name->baseName .'.'.$name->extension;
                     $model->filepath=$path;
-                    $model->uesr_id=Yii::$app->user->id;
+                    $model->username=Yii::$app->user->identity->username;
 
                     if ($model->save()){
+                        Yii::$app->session->setFlash('success', "New photo uploaded successfully.");
+
                         return $this->redirect(['index']);
                     }
                 }

@@ -22,7 +22,6 @@ $this->params['breadcrumbs'][]=$this->title;
 
         <?= $form->field($model, 'filename')->fileInput() ?>
 
-           <h4>ID: <?php echo Yii::$app->user->id ?></h4>
 
 
         <div class="form-group">

@@ -14,9 +14,9 @@ class m200314_105215_create_media_table extends Migration
     {
         $this->createTable('{{%media}}', [
             'id' => $this->primaryKey(),
-            'filename' => $this->text(),
+            'filename' => $this->string(245),
             'filepath' => $this->text(),
-            'uesr_id' => $this->integer(),
+            'username' => $this->text()->notNull(),
         ]);
     }
 

@@ -28,8 +28,8 @@ class Media extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['filename', 'filepath'], 'string'],
-            [['uesr_id'], 'integer'],
+            [['filename', 'filepath','username'], 'string'],
+
         ];
     }
 
